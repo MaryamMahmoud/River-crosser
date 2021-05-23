@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="900.0" style="-fx-background-color: #01c72f;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="rivercrosser.Story3Controller">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#2bbdf2" height="250.0" layoutY="225.0" stroke="BLACK" strokeType="INSIDE" width="900.0" />
+      <Rectangle fx:id="boat" arcHeight="5.0" arcWidth="5.0" fill="#976831" height="118.0" layoutX="330.0" layoutY="356.0" stroke="BLACK" strokeType="INSIDE" width="259.0" />
+      <Button fx:id="sailupBtn" layoutX="784.0" layoutY="247.0" mnemonicParsing="false" onAction="#moveBoatUp" prefHeight="95.0" prefWidth="101.0" style="-fx-background-radius: 9999999999;" text="↑">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="44.0" />
+         </font>
+      </Button>
+      <Button fx:id="undoBtn" disable="true" layoutX="14.0" layoutY="234.0" mnemonicParsing="false" onAction="#undo" prefHeight="66.0" prefWidth="64.0" style="-fx-background-radius: 9999999999;" text="UNDO">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button fx:id="redoBtn" disable="true" layoutX="14.0" layoutY="314.0" mnemonicParsing="false" onAction="#redo" prefHeight="66.0" prefWidth="64.0" style="-fx-background-radius: 9999999999;" text="REDO">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="14.0" layoutY="394.0" mnemonicParsing="false" onAction="#instructions" prefHeight="66.0" prefWidth="64.0" style="-fx-background-radius: 9999999999;" text="?">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Button>
+      <Button layoutX="414.0" layoutY="14.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: #976831; -fx-background-radius: 30;" text="SAVE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#Mainmenu" prefHeight="26.0" prefWidth="158.0" style="-fx-background-color: #976831; -fx-background-radius: 30;" text="Main Menu">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="saildownBtn" disable="true" layoutX="784.0" layoutY="357.0" mnemonicParsing="false" onAction="#moveBoatDown" prefHeight="95.0" prefWidth="101.0" style="-fx-background-radius: 9999999999;" text="↓">
+         <effect>
+            <Glow />
+         </effect>
+         <font>
+            <Font name="System Bold" size="44.0" />
+         </font>
+      </Button>
+      <Button layoutX="214.0" layoutY="14.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: #2bbdf2; -fx-background-radius: 30;" text="AUTO SOLVE">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="farmer2" fitHeight="124.0" fitWidth="76.0" layoutX="397.0" layoutY="511.0" onMouseClicked="#moveFarmer2" onMouseEntered="#farmerlabel" onMouseExited="#unsetlabel">
+         <image>
+            <Image url="@../Documents/NetBeansProjects/RiverCrosser/src/rivercrosser/farmer.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="614.0" layoutY="14.0" mnemonicParsing="false" onAction="#Reset" prefHeight="30.0" prefWidth="158.0" style="-fx-background-color: #2bbdf2; -fx-background-radius: 30;" text="Reset">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="scorelbl" alignment="CENTER" layoutX="801.0" layoutY="39.0" prefHeight="30.0" prefWidth="86.0" text="0">
+         <font>
+            <Font name="System Bold" size="44.0" />
+         </font>
+      </Label>
+      <Label fx:id="message" alignment="CENTER" layoutX="144.0" layoutY="657.0" prefHeight="30.0" prefWidth="690.0" underline="true" />
+      <Label alignment="CENTER" layoutX="790.0" layoutY="4.0" prefHeight="36.0" prefWidth="102.0" text="Score">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="farmer1" fitHeight="124.0" fitWidth="76.0" layoutX="317.0" layoutY="511.0" onMouseClicked="#moveFarmer1" onMouseEntered="#farmerlabel" onMouseExited="#unsetlabel">
+         <image>
+            <Image url="@../Documents/NetBeansProjects/RiverCrosser/src/rivercrosser/farmer.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kid1" fitHeight="95.0" fitWidth="76.0" layoutX="577.0" layoutY="540.0" onMouseClicked="#moveChild1" onMouseEntered="#childlabel" onMouseExited="#unsetlabel">
+         <image>
+            <Image url="@../Documents/NetBeansProjects/RiverCrosser/src/rivercrosser/farmer.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kid2" fitHeight="95.0" fitWidth="76.0" layoutX="657.0" layoutY="540.0" onMouseClicked="#moveChild2" onMouseEntered="#childlabel" onMouseExited="#unsetlabel">
+         <image>
+            <Image url="@../Documents/NetBeansProjects/RiverCrosser/src/rivercrosser/farmer.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="farmer22" fitHeight="124.0" fitWidth="76.0" layoutX="397.0" layoutY="71.0" onMouseClicked="#moveFarmer2" onMouseEntered="#farmerlabel" onMouseExited="#unsetlabel" visible="false">
+         <image>
+            <Image url="@../Documents/NetBeansProjects/RiverCrosser/src/rivercrosser/farmer.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="farmer11" fitHeight="124.0" fitWidth="76.0" layoutX="317.0" layoutY="71.0" onMouseClicked="#moveFarmer1" onMouseEntered="#farmerlabel" onMouseExited="#unsetlabel" visible="false">
+         <image>
+            <Image url="@../Documents/NetBeansProjects/RiverCrosser/src/rivercrosser/farmer.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kid11" fitHeight="95.0" fitWidth="76.0" layoutX="577.0" layoutY="100.0" onMouseClicked="#moveChild1" onMouseEntered="#childlabel" onMouseExited="#unsetlabel" visible="false">
+         <image>
+            <Image url="@../Documents/NetBeansProjects/RiverCrosser/src/rivercrosser/farmer.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="kid22" fitHeight="95.0" fitWidth="76.0" layoutX="657.0" layoutY="100.0" onMouseClicked="#moveChild2" onMouseEntered="#childlabel" onMouseExited="#unsetlabel" visible="false">
+         <image>
+            <Image url="@../Documents/NetBeansProjects/RiverCrosser/src/rivercrosser/farmer.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
